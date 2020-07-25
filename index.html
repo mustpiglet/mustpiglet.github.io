@@ -78,7 +78,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/25/%E5%A6%82%E4%BD%95%E5%9C%A8Windows%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BABlo/">如何在Windows系统下搭建个人Blo</a>
+      <a class="article-title" href="/2020/07/25/%E5%A6%82%E4%BD%95%E5%9C%A8Windows%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BABlo/">如何在Windows系统下搭建个人Blog</a>
     </h1>
   
 
@@ -96,26 +96,27 @@
 </ul>
 <p>&emsp;<br>&emsp;<br>&emsp;</p>
 <p>##二．部署环境<br>为什么使用<strong>HEXO</strong>博客框架呢？<br>第一个是如果在搭博客过程中遇到各种各样的问题，网上解决方案比较多。有很多社区可以进行讨论。对于那些刚开始接触博客经验比较少的同学帮助很大。第二个是<strong>HEXO</strong>在各个平台，不管是Windows或者是Linux又或者是MacOS系统上操作都比较类似，命令都大差不差。</p>
-<p>我的这个<strong>@MUSTPIGLET</strong>博客主要是模仿:<a href="https://www.codesheep.cn" target="_blank" rel="noopener">https://www.codesheep.cn</a>这篇博客来搭建的。</p>
+<p>我的这个<strong>@MUSTPIGLET</strong>博客主要是模仿:<a href="https://www.codesheep.cn" target="_blank" rel="noopener">https://www.codesheep.cn</a>这篇博客来搭建的。<br><img src="http://m.qpic.cn/psc?/V52gbC8O0r88vt3LZZNf12fCJX1WNVb7/bqQfVz5yrrGYSXMvKr.cqVQVEz4zxOSQZjIJN5LWQLqJfJYT6LjEq1CiQ0mo.Ebu5u.blqoN1fs1w5m8LYohjgJar9QBB5RAtGHBUSctilg!/b&bo=5QTTAuUE0wIDCSw!&rf=viewer_4" alt="codesheep"></p>
 <p>首先,下载并安装<strong>Node.js</strong>（下载地址：<a href="https://nodejs.org" target="_blank" rel="noopener">https://nodejs.org</a>&lt;/<a href="https://nodejs.org&gt;），记得选择LTS（长期支持版）。" target="_blank" rel="noopener">https://nodejs.org&gt;），记得选择LTS（长期支持版）。</a><br>接下来打开CMD命令提示符（管理员）注意从这一步开始所有指令都是在管理员模式下的命令提示符下操作，输入<code>:node –v</code>查看<strong>node.js</strong> 版本，确认是否安装成功。同理npm，如下图所示。</p>
+<p><img src="http://m.qpic.cn/psc?/V52gbC8O0r88vt3LZZNf12fCJX1WNVb7/TmEUgtj9EK6.7V8ajmQrEPxtkABtqQw8AXebASiS7tpsBwXyTRAKQSP8jvP9K1xMSx.CQGbxBCqPkLQTQdBjkz8f4Mp929Ic5bLNPCAvRhA!/b&bo=SgHpAEoB6QADGTw!&rf=viewer_4" alt="cmd"></p>
 <blockquote>
 <p>补充知识：NPM是随同Node.JS一起安装的包管理工具，能解决Node.JS代码部署上的很多问题，常见的使用场景有以下几种：<br>允许用户从NPM服务器下载别人编写的第三方包到本地使用。<br>允许用户从NPM服务器下载并安装别人编写的命令行程序到本地使用。<br>允许用户将自己编写的包或命令行程序上传到NPM服务器供别人使用。</p>
 </blockquote>
 <p>然后是下载Git（<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">https://git-scm.com/downloads</a>），在这里笔者在下载时候发现下载速度非常慢，只有几百b/s。如果在下载时候遇到了和我一样的情况可以从国内镜像源下载，这样速度可以提高很多，方法在这里就不详细描述了。然后按默认选项安装即可。</p>
 <p>安装完成后，在文件夹中找到“<strong>Git</strong>”-&gt;“<strong>Git Bash</strong>”，蹦出一个类似命令行窗口的东西，就说明Git安装成功！<br>安装完成后，还需要最后一步设置，在git-base.exe中输入下面的命令：<br><code>$ git config —global user.name ”Your Name”</code><br><code>$ git config —global user.email “email@example.com”</code></p>
+<p><img src="http://m.qpic.cn/psc?/V52gbC8O0r88vt3LZZNf12fCJX1WNVb7/TmEUgtj9EK6.7V8ajmQrEL26rY.ZLQWzgKMh*X4hkicCakcepkcVItIjpgIB8I.h4w.0La5C9Tuiv7B8QzfUEHnKUNURvlqJOqt9krAHPtM!/b&bo=pgH8AKYB*AADGTw!&rf=viewer_4" alt="git config"></p>
 <p>因为Git是分布式版本控制系统，所以每个端都要自报家门。这里要注意的是 git config命令的—global参数，用了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定使用不同的用户名和Email地址。</p>
 <p>因为HEXO需要node.js支持，在完成上面这些步骤就可以开始正式安装<strong>HEXO</strong>博客框架了。</p>
 <p>选装cnpm<br>说明：因为npm这款包管理器安装插件是从国外服务器下载，受网络影响大，可能出现异常，如果npm的服务器在中国就好了，所以我们乐于分享的淘宝团队干了这事。</p>
 <p>安装使用淘宝cnpm镜像源命令如下：<br><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code><br><code>-g</code>：全局安装<br>可以输入<code>cnpm</code>检测是成功。<br>可以输入<code>cnpm –v</code>查看版本。</p>
 <p>接下来使用安装好的cnpm全局安装hexo 输入如下命令：<br><code>cnpm install -g hexo-cli</code><br>输入<code>hexo –v</code> 查看版本（确认安装成功）！：</p>
-<p>&emsp;<br>&emsp;<br>&emsp;<br>##三．初始化博客</p>
+<p><img src="http://m.qpic.cn/psc?/V52gbC8O0r88vt3LZZNf12fCJX1WNVb7/TmEUgtj9EK6.7V8ajmQrEGITzHAQqXgTCVA1WE1iYSKY5BfPbBAliQWNsuI8magosE2ydDFhbKDQTQQEye*8VWXvmje3YE6QCHQ6AZ6OP0g!/b&bo=qAFtAagBbQEDGTw!&rf=viewer_4" alt="hexo-v"><br>&emsp;<br>&emsp;<br>&emsp;<br>##三．初始化博客</p>
 <p>首先新建一个<block>文件夹用来存放初始化博客，地址随意，因为<strong>Git</strong>和<strong>HEXO</strong>都是全局安装的。<br>接下来新建博客，在命令提示符窗口进入之前新建的<block>文件夹内输入指令：<br><code>hexo init</code></p>
-<p>运行hexo初始化结果输入指令：<br><code>hexo s</code></p>
-<p>在未部署时候的地址<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a><br>可以在浏览器输入地址查看初始化页面。</p>
+<p>运行hexo初始化结果输入指令：<br><code>hexo s</code><br>在未部署时候的地址<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a><br>可以在浏览器输入地址查看初始化页面。</p>
 <p>&emsp;<br>&emsp;<br>&emsp;</p>
 <p>##四．写博客：</p>
 <p>新建博客文章命令：<br><code>hexo n ”文章标题”</code><br>新建完成后打开 <em>block</em> 文件夹下的 <em>source</em> 找到 <em>_posts</em> ,可以看到一个以.md结尾的文件，就可以开始写博客啦。在这里比较推荐使用<strong>Notepad++</strong>来编辑。<br>基本语法规则参见：<a href="http://www.mdeditor.com/" target="_blank" rel="noopener">http://www.mdeditor.com/</a></p>
-<p>编辑完成后保存退出<br>清理释放命令：<br><code>hexo clean</code><br>生成新博客命令：<br><code>hexo g</code> </p>
+<p>编辑完成后保存退出<br>清理释放命令：<br><code>hexo clean</code><br>生成新博客命令：<br><code>hexo g</code></p>
 <p>&emsp;<br>&emsp;<br>&emsp;</p>
 <p>##五．将博客部署到远端<br>在<strong>GitHub</strong>上新建一个仓库 new repository<br>地址为: githubID.github.io<br>例如： <a href="https://mustpiglet.github.io" target="_blank" rel="noopener">https://mustpiglet.github.io</a></p>
 <p>接下来安装插件，将本地博客部署到GitHub上<br><code>cnpm install --save hexo-deployer-git</code></p>
@@ -123,14 +124,15 @@
 <pre><code>type: git
 repo: https://github.com/mustpiglet/mustpiglet.github.io.git
 branch: master</code></pre><p><strong>注意！删去type：后面原有的引号，在冒号后面一定要输入要空格！</strong></p>
-<p>部署到仓库命令：<br><code>hexo d</code><br>&emsp;<br>&emsp;<br>&emsp;</p>
+<p>部署到仓库命令：<br><code>hexo d</code></p>
+<p>&emsp;<br>&emsp;<br>&emsp;</p>
 <hr>
 <p>##参考文献<br>Bilibili知名UP主Codesheep<br>MD语法入门-简书<br>GIT简介-廖雪峰的官方网站<br><a href="https://www.cnblogs.com/zhao-shan/p/12330927.html" target="_blank" rel="noopener">解决git下载很慢的问题 - 赵羴 - 博客园</a><br><a href="https://www.runoob.com/nodejs/nodejs-tutorial.html" target="_blank" rel="noopener">Node.js 教程 | 菜鸟教程</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/25/%E5%A6%82%E4%BD%95%E5%9C%A8Windows%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BABlo/" data-id="ckd0zl2cm00014gtj49wudh4c" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/07/25/%E5%A6%82%E4%BD%95%E5%9C%A8Windows%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BABlo/" data-id="ckd13kf2d00023ctjbm7agcey" class="article-share-link">Share</a>
       
       
     </footer>
@@ -168,7 +170,7 @@ branch: master</code></pre><p><strong>注意！删去type：后面原有的引�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/25/My-first-block/" data-id="ckd0zl2cg00004gtjc5sicl4c" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/07/25/My-first-block/" data-id="ckd13kf2a00013ctjd8h2fdyu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -217,7 +219,7 @@ branch: master</code></pre><p><strong>注意！删去type：后面原有的引�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/25/hello-world/" data-id="ckd0zl2cq00024gtjf8ck1t0n" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/07/25/hello-world/" data-id="ckd13kf2400003ctjacku9utm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -258,7 +260,7 @@ branch: master</code></pre><p><strong>注意！删去type：后面原有的引�
       <ul>
         
           <li>
-            <a href="/2020/07/25/%E5%A6%82%E4%BD%95%E5%9C%A8Windows%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BABlo/">如何在Windows系统下搭建个人Blo</a>
+            <a href="/2020/07/25/%E5%A6%82%E4%BD%95%E5%9C%A8Windows%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BABlo/">如何在Windows系统下搭建个人Blog</a>
           </li>
         
           <li>
